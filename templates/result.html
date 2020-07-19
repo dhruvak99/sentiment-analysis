@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body style="background-color:#f5bf42;">
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			ML App
+		</div>
+		
+	</div>
+	</header>
+	<p style="color:blue;font-size:40px;text-align: center;"><b>Thank You</b></p>
+	<div class="results">
+
+	<!the following peice of code is called jinja syntax it is used to access the prediction returned from our http request>	
+
+	{% if prediction == 1%}
+	<h2 style="color:blue;font-size: 50px;text-align:center;">You have submitted a Positive review</h2>
+	{% elif prediction == 0%}
+	<h2 style="color:red;font-size: 50px;text-align:center;">You have submitted a Negative review</h2>
+	{% endif %}
+
+	</div>
+
+</body>
+</html>
